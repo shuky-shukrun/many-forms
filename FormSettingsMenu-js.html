@@ -1,0 +1,15 @@
+<script>
+
+    document.getElementById('save').addEventListener("click", saveSettings);
+    setupOpenIstructions('instructions', 'FormSettingsHelp', 'Form Settings Help');
+        
+    function saveSettings(){
+        var AllowResponses = document.getElementById("AllowResponses").value;
+        var publish = document.getElementById("publish").value;
+        var confMsg = document.getElementById("confMsg").value;
+        var closeMsg = document.getElementById("closeMsg").value;
+
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).formSettings(AllowResponses, publish, confMsg, closeMsg);
+    }
+  
+</script>

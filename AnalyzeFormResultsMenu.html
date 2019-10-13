@@ -1,0 +1,84 @@
+<!-- Use this CSS stylesheet to ensure that add-ons styling 
+     matches the default Google Docs styles -->
+     <link href="https://ssl.gstatic.com/docs/script/css/add-ons.css"
+     rel="stylesheet"> 
+
+<div class="sidebar">
+    
+
+    <div>
+        <h2>Attention!</h2>
+        <p>The following method may damaged your form responses. Read the instructions carefully.</p>
+    </div>
+    <div>
+        <h3>Remove Duplicate Responses / Remove Unauthorized Responses</h3>
+        <h4><a id='removeHelp'>READ BEFORE USE!</a></h4>
+        
+        <div class="block form-group">
+            <label><b>Primary Question Number:</b></label>
+            <option id='baseItemHelp' value="https://drive.google.com/uc?id=1R6DiA4jBsLAIqkMLjFSbk7-LbQwKFe1L&export=download" class='secondary'>What is this?</option>
+            <select id="PrimaryItem">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+            </select>
+        </div>        
+        <div style="text-align:center;">
+            <br>
+            <button class="create" id="removeDupBtn" value="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif">Remove Duplicate Responses</button>
+            <br>
+            <br>
+            <button class="create" id="removeUnAuthBtn" value="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif">Remove Unauthorized Responses</button>      
+        </div>
+    </div> <!-- CLOSE  -->
+    <br>
+        
+    <div>
+        <h3>Calc Average</h3>
+        <h4><a id='calcAvgHelp'>READ BEFORE USE!</a></h4>
+        <div class="block form-group">
+            <label><b>Questions to analyze (sepatated by comma):</b></label>
+            <option id='qNumbersHelp' value="https://drive.google.com/uc?id=1R6DiA4jBsLAIqkMLjFSbk7-LbQwKFe1L&export=download" class='secondary'>What is this?</option>
+            <input placeholder="1,2,3,4,5..." id="qNumbers" type="text" style="width: 95%;"/>
+            <br><br>
+        <div style="text-align:center;">
+            <button class="create" id="CalcAvgBtn" value="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif">Calc Results AVG</button>      
+            <p id="CalcAvgWait"></p>
+        </div>
+    </div> <!-- CLOSE  -->  
+    
+    <br>
+    <br>
+    <div style="text-align:center;">
+        <a id='instructions'>Analyze FormResults Help</a>
+    </div>
+
+    <?!= include("GeneralScript"); ?>
+    <?!= include("AnalyzeFormResultsMenu-js"); ?>
+</div>
+
+    
+    

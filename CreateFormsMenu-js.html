@@ -1,0 +1,23 @@
+<script>
+
+    document.getElementById('submit').addEventListener("click", createForms);
+    
+    setupOpenIstructions('instructions', 'CreateFormsHelp', 'Creating Forms Help');
+    
+    setupMessageBox('Form ID Help','formIdHelp', 'On the Url line in your browser', 750, 150, '95%', '95%');
+    setupMessageBox('Folder ID Help','folderIdHelp', 'On the Url line in your browser', 750, 150, '95%', '95%');
+    setupMessageBox('Separator Help','separatorHelp', 'Using pipe will make this result:', 750, 300, '95%', '95%');
+    
+    
+    function createForms(){
+    
+        var data = {};
+        data.formId = document.getElementById('formId').value;
+        data.destFolderId = document.getElementById('destFolderId').value;
+        data.separator = document.getElementById('separator').value;
+    
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).createFormsJS(data);
+    }
+    
+    
+</script>

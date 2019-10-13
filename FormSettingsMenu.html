@@ -1,0 +1,52 @@
+<!-- Use this CSS stylesheet to ensure that add-ons styling 
+     matches the default Google Docs styles -->
+<link href="https://ssl.gstatic.com/docs/script/css/add-ons.css"
+     rel="stylesheet"> 
+
+<div class="sidebar">
+    
+    <div class="block form-group">
+        <label><b>Allow Responses</b></label>
+        <select id="AllowResponses">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+    
+    <div class="block form-group">
+        <label><b>Publish Results</b></label>
+        <select id="publish">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+
+    <div class="block form-group">
+        <label for="confMsg"><b>Form Confirmation Message</b></label>
+        <textarea placeholder="Leave empty for google default message" id="confMsg" type="text" rows='3' style="width: 95%;"></textarea>
+    </div>
+
+    <div class="block form-group">
+        <label for="confMsg"><b>Closed Form Message</b></label>
+        <textarea placeholder="Leave empty for google default message" id="closeMsg" type="text" rows='3' style="width: 95%;"></textarea>
+    </div>
+    
+    <br>
+    
+    <div>
+        <button class="create" id="save" value="https://mir-s3-cdn-cf.behance.net/project_modules/disp/35771931234507.564a1d2403b3a.gif">Save</button>      
+    </div> <!-- CLOSE  -->
+    
+    <br>
+    <br>
+    <div style="text-align:center;">
+        <a id='instructions'>Form Settings Help</a>
+    </div>
+
+
+    <?!= include("GeneralScript"); ?>
+    <?!= include("FormSettingsMenu-js"); ?>
+</div>
+
+    
+    

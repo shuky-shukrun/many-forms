@@ -1,0 +1,34 @@
+<script>
+
+    document.getElementById('removeDupBtn').addEventListener("click", removeDup);
+    document.getElementById('removeUnAuthBtn').addEventListener("click", removeUnAuth);
+    document.getElementById('CalcAvgBtn').addEventListener("click", calcAvg);
+    
+    
+    setupOpenIstructions('calcAvgHelp', 'AnalyzeFormResultsHelp-Avg', 'Analyze Form Results Help');
+    setupOpenIstructions('removeHelp', 'AnalyzeFormResultsHelp', 'Analyze Form Results Help');
+    
+    setupMessageBox('Base Item Help', 'baseItemHelp','The uniqe field in the form. email / I.D / phone / ext..\n For your attantion, question Numbering start from 0!', 400, 400, '95%', '95%');
+    setupMessageBox('Questions Number Help','qNumbersHelp', 'Only scale Items are supported!\n For your attantion, question Numbering start from 0!', 400, 400, '95%', '95%');
+    
+    // Loading message for romove and calc options are inside the function.
+    // The reason is it's shows confirmation message before starting
+    
+    function removeDup(){
+        var PrimaryItem = document.getElementById("PrimaryItem").value;
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).removeDuplicates(PrimaryItem);
+    }
+    
+    function removeUnAuth() {
+        var PrimaryItem = document.getElementById("PrimaryItem").value;
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).removeUnAuth(PrimaryItem);
+    }
+    
+    
+    function calcAvg() {
+        var qNumbers = document.getElementById("qNumbers").value;
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).calcResponsesAvg(qNumbers);
+        
+    }
+
+</script>

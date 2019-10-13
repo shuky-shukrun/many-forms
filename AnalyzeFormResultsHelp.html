@@ -1,0 +1,38 @@
+<!-- Use this CSS stylesheet to ensure that add-ons styling 
+     matches the default Google Docs styles -->
+     <link href="https://ssl.gstatic.com/docs/script/css/add-ons.css"
+     rel="stylesheet"> 
+
+<div>
+    
+    <h3><u>Remove Duplicate Responses</u></h3>
+    <div>
+        <p>Removing duplicate responses based on spcific item.<br>
+        For example, if the first item in the form is an email address, this method will remove any other response with the same email address.<br>
+        Responses with the same email address on other form will NOT removed.<br></p>
+    </div>
+        
+    <div>
+        <h3><u>Remove Unauthorized Responses</u></h3>
+        <p>Removing responses from a form based on approved keys. Like the removing duplicates option, this function is based on the first question in the form.<br>
+        For example, Lets say the first question is an email address and you want to delete any response from witch not exist in specific list.<br>
+        For this method, you'll need to add all the email addresses the column A on sheet 'Approved List' (see the following example).
+        Responses with the same email address on other form will NOT removed.<br>
+    </div> <!-- CLOSE  -->
+    
+    <?!= include("Limitations"); ?>
+    <li><b>All questions up to your primary question must be 'requiered'. Normally, it's the first question.</b></li>
+    <h3><u>How to Use</u></h3>
+    <div>
+        <li type="I"><b>On the spreadsheet, select the range where the forms URLs.</b></li>
+        <img src='https://drive.google.com/uc?export=view&id=1TtMMW1Gly9E_fqIF9JzuO4JPks9ptA8f' width="225" height="150"/>
+        <br>
+        <br>
+        <li type="I"><b>Select primary question number.</b></li>
+        <img src='https://drive.google.com/uc?export=view&id=1R6DiA4jBsLAIqkMLjFSbk7-LbQwKFe1L' width="300" height="270"/>
+        <br>
+        <br>
+        <li type="I"><b>Press 'Remove Duplicate Responses / Remove Unauthorized Responses' and wait.</b></li>
+    </div>
+
+</div>

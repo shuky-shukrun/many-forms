@@ -1,0 +1,47 @@
+<script>
+    
+    function setupMessageBox(title, id, helpText, boxWidth, boxHeight, imgWidth, imgHeight) {
+        var elem = document.getElementById(id);
+        elem.addEventListener("click", showMessageBox);
+        elem.title = title;
+        elem.helpText = helpText;
+        elem.img = elem.value;
+        elem.boxWidth = boxWidth;
+        elem.boxHeight = boxHeight;
+        elem.imgWidth = imgWidth;
+        elem.imgHeight = imgHeight;
+    }
+    
+    function showMessageBox(evt){
+        google.script.run.withFailureHandler(onFailure)
+                         .withSuccessHandler(showAlert)
+                         .showMessageBox(evt.target.title, evt.target.helpText, evt.target.img, evt.target.boxWidth, evt.target.boxHeight, evt.target.imgHeight, evt.target.imgHeight);
+    }  
+    
+    
+    function setupOpenIstructions(id, htmlFile, title) {
+        var elem = document.getElementById(id);
+        elem.addEventListener("click", openInstructions);
+        elem.htmlFile = htmlFile;
+        elem.title = title;
+    }
+    
+    function openInstructions(evt) {
+        google.script.run.showModalDialog(evt.target.htmlFile, evt.target.title, 500, 500);
+    }
+    
+    
+    
+    function showAlert(msg) {
+          google.script.run.alert(msg);
+    }
+    
+    
+    function onFailure(error) {
+    if(error.message.localeCompare('Exceeded maximum execution time') == 0) {
+          error.message = error.message + '\nFree G-Suite users are limited to 6 minutes run for each function.\nYou can reselect the unhandeled range and try again.';
+    }
+        var msg = 'Error!\n\n' + error.name + '\n'+ error.message;
+        showAlert(msg);
+    }
+</script>
