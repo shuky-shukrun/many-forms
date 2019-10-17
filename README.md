@@ -5,7 +5,7 @@ A Google Spreadsheet add-on that allow you to create and analyze google forms us
 This project is separated to two part, the first one design for very specific task, and the second is more general.
 
 ### Scrap it!
-The first part is a small python script (just scrapSelenium.py file) witch made to scrap data from https://info.braude.ac.il/yedion/fireflyweb.aspx
+The first part is a small python script (just scrapSelenium.py file) witch made to scrap data from [Yedion Website](https://info.braude.ac.il/yedion/fireflyweb.aspx)
 The idea is make a csv file with the details of all the courses in a given semester at [Ort Braude Collage of Engineering](https://w3.braude.ac.il).
 Once we have this file, we can create a surveys system, using the second part of this project.
 
