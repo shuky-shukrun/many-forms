@@ -32,7 +32,7 @@ function showSidebar(fileName, title) {
     SpreadsheetApp.getUi().showSidebar(html);
 }
 
-// generic function to open popap window html file
+// generic function to open popup window html file
 function showModalDialog(fileName, title, width, height) {
     var htmlOutput = HtmlService.createTemplateFromFile(fileName).evaluate();
     htmlOutput.setWidth(width).setHeight(height);
@@ -63,7 +63,7 @@ function AnalyzeMenu() {
 }
 
 
-// generic function to open popap window with image and help text
+// generic function to open popup window with image and help text
 function showMessageBox(title, helpText, img, boxWidth, boxHeight, imgWidth, imgHeight) {
       var htmlBody =  '<link href="https://ssl.gstatic.com/docs/script/css/add-ons.css" rel="stylesheet">' +
                       '<div style="text-align:center;">' +
@@ -76,7 +76,7 @@ function showMessageBox(title, helpText, img, boxWidth, boxHeight, imgWidth, img
     SpreadsheetApp.getUi().showModalDialog(htmlOutput, title);
 }
 
-// generic function to load contant from html file into another html file (useful to seperate body from script)
+// generic function to load content from html file into another html file (useful to separate body from script)
 function include(filename) {
       return HtmlService.createHtmlOutputFromFile(filename).getContent();
 }

@@ -18,7 +18,7 @@ with open('AllCourses.csv', 'r', encoding='utf-8') as csv_input_file:
     with open('lecturesFinal.txt', 'w', encoding='utf-8') as output_file:
               
         for row in spamreader:
-            # extract lectures and practicies
+            # extract lectures and practices
             courseNo = str(row[0])
             driver.get(courseDetailsUrl+courseNo) #navigate to the page
             elem = driver.find_elements_by_class_name("text")

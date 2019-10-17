@@ -19,7 +19,7 @@
     }  
     
     
-    function setupOpenIstructions(id, htmlFile, title) {
+    function setupOpenInstructions(id, htmlFile, title) {
         var elem = document.getElementById(id);
         elem.addEventListener("click", openInstructions);
         elem.htmlFile = htmlFile;
@@ -39,7 +39,7 @@
     
     function onFailure(error) {
     if(error.message.localeCompare('Exceeded maximum execution time') == 0) {
-          error.message = error.message + '\nFree G-Suite users are limited to 6 minutes run for each function.\nYou can reselect the unhandeled range and try again.';
+          error.message = error.message + '\nFree G-Suite users are limited to 6 minutes run for each function.\nYou can reselect the unhandled range and try again.';
     }
         var msg = 'Error!\n\n' + error.name + '\n'+ error.message;
         showAlert(msg);
