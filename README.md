@@ -1,6 +1,20 @@
 # many-forms
 A Google Spreadsheet add-on that allow you to create and analyze google forms using friendly UI. Use case can be a surveys system for school or university, where you may need many different forms with the same questions, one for each teacher / lecturer.
 
+## Project Structure
+This project is separated to two part, the first one design for very specific task, and the second is more general.
+
+### Scrap it!
+The first part is a small python script (just scrapSelenium.py file) witch made to scrap data from https://info.braude.ac.il/yedion/fireflyweb.aspx
+The idea is make a csv file with the details of all the courses in a given semester at [Ort Braude Collage of Engineering](https://w3.braude.ac.il).
+Once we have this file, we can create a surveys system, using the second part of this project.
+
+### Google Sheet Add-on
+The second and the main part of this project is the google sheet add-on.
+This add-on allows you to create, manage and analyze many Google form files via friendly UI.
+Using this add-on, we can take a sheet of data (the data from the first part for example), and create unique Google form of each row in the sheet.
+Once we do that, we have a database of google form files, witch can be used for a survey system.
+
 ## Features
 * Create hundreds of custom google forms just with one click.
 * Manage your created forms: 
