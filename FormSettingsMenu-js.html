@@ -4,12 +4,14 @@
     setupOpenIstructions('instructions', 'FormSettingsHelp', 'Form Settings Help');
         
     function saveSettings(){
-        var AllowResponses = document.getElementById("AllowResponses").value;
-        var publish = document.getElementById("publish").value;
-        var confMsg = document.getElementById("confMsg").value;
-        var closeMsg = document.getElementById("closeMsg").value;
+        var data = {};
+        data.allowResponses = document.getElementById("AllowResponses").value;
+        data.publish = document.getElementById("publish").value;
+        data.confMsg = document.getElementById("confMsg").value;
+        data.closeMsg = document.getElementById("closeMsg").value;
+        data.showLink = document.getElementById("showLink").value;
 
-        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).formSettings(AllowResponses, publish, confMsg, closeMsg);
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).formSettings(data);
     }
   
 </script>
