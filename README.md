@@ -15,11 +15,16 @@ This add-on allows you to create, manage and analyze many Google form files via 
 Using this add-on, we can take a sheet of data (the data from the first part for example), and create unique Google form of each row in the sheet.
 Once we do that, we have a database of google form files, witch can be used for a survey system.
 
+### For Developers
+I wish to put the files in more reasonable structure, but since I have deploy it eventually to Google Apps Script service, I have to keep all the files together in one folder.
+Considering that, I tried to named the files in a way that keep them grouped by subjects.
+
 ## Features
 * Create hundreds of custom google forms just with one click.
 * Manage your created forms: 
   * Allow / do not allow new responses
   * Publish / do not publish results
+  * Show / do not show link to another respond
   * Custom confirmation message
   * Custom close-form message
   * Remove duplicate responses!
