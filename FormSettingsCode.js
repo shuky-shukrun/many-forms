@@ -1,9 +1,10 @@
-function formSettings(allowResponses, publish, confMsg, closeMsg) {
+function formSettings(data) {
 
     showMessageBox('Saving... Please wait', '', loadingGif, 300, 150, 100, 100);
     
-    allowResponses = allowResponses == 1 ? true : false;
-    publish = publish == 1 ? true : false;
+    data.allowResponses = data.allowResponses == 1 ? true : false;
+    data.publish = data.publish == 1 ? true : false;
+    data.showLink = data.showLink == 1 ? true : false;
 
     var ws = SpreadsheetApp.getActiveSheet();
     var range = ws.getActiveRange();
@@ -25,10 +26,11 @@ function formSettings(allowResponses, publish, confMsg, closeMsg) {
             continue;
         }
 
-        formFile.setAcceptingResponses(allowResponses) // set to AllowResponses true to accept new responses
-                .setPublishingSummary(publish)
-                .setConfirmationMessage(confMsg)
-                .setCustomClosedFormMessage(closeMsg);
+        formFile.setAcceptingResponses(data.allowResponses) // set to AllowResponses true to accept new responses
+                .setPublishingSummary(data.publish)
+                .setShowLinkToRespondAgain(data.showLink)
+                .setConfirmationMessage(data.confMsg)
+                .setCustomClosedFormMessage(data.closeMsg);
     }
     
     var msg = 'Done!';
