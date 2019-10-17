@@ -3,7 +3,7 @@ function createFormsJS(data) {
   
     showMessageBox('Creating... Please wait', '', loadingGif, 300, 150, 100, 100);
     
-    // get neccesary info
+    // get necessary info
     var ws = SpreadsheetApp.getActiveSheet();
     var range = ws.getActiveRange();
     var numRows = range.getNumRows();
