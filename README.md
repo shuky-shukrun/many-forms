@@ -18,3 +18,15 @@ A Google Spreadsheet add-on that allow you to create and analyze google forms us
 
 ### Creating many forms:
 ![Creating Forms](/images/create-forms.gif)
+
+### Open / Close for New Responses:
+![Creating Forms](/images/create-forms.gif)
+
+### Change Confirmation and Closed Message:
+![Creating Forms](/images/create-forms.gif)
+
+### Remove Unauthorized Responses:
+![Creating Forms](/images/remove-unauthorized.gif)
+
+### Remove Duplicate Responses:
+![Creating Forms](/images/remove-duplicates.gif)
