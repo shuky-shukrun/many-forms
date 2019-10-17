@@ -5,7 +5,7 @@ A Google Spreadsheet add-on that allow you to create and analyze google forms us
 This project is separated to two part, the first one design for very specific task, and the second is more general.
 
 ### Scrap it!
-The first part is a small python script (just scrapSelenium.py file) witch made to scrap data from https://info.braude.ac.il/yedion/fireflyweb.aspx
+The first part is a small python script (just scrapSelenium.py file) witch made to scrap data from [Yedion Website](https://info.braude.ac.il/yedion/fireflyweb.aspx)
 The idea is make a csv file with the details of all the courses in a given semester at [Ort Braude Collage of Engineering](https://w3.braude.ac.il).
 Once we have this file, we can create a surveys system, using the second part of this project.
 
@@ -33,7 +33,7 @@ Considering that, I tried to named the files in a way that keep them grouped by 
   
 ## How to use:
 * Create a copy of [Many-Forms-Spreadsheet](https://docs.google.com/spreadsheets/d/16SCjkceW5H87v-M8zvSxjoA-ErT5ndUYxSzcvBjCz-o/edit?usp=sharing) on your google account. 
-* Open the spreadsheet and Follow the instructions or watch my [YouTube tutorial](https://www.youtube.com/playlist?list=PLpqDEyxyeqV4mGax4bZAS0si7ZZerjOXx).
+* Open the spreadsheet and Follow the instructions, watch the following demo gifs or watch the [YouTube tutorial](https://www.youtube.com/playlist?list=PLpqDEyxyeqV4mGax4bZAS0si7ZZerjOXx).
 
 ### Creating many forms:
 ![Creating Forms](/images/create-forms.gif)
