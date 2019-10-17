@@ -3,6 +3,7 @@
     document.getElementById('removeDupBtn').addEventListener("click", removeDup);
     document.getElementById('removeUnAuthBtn').addEventListener("click", removeUnAuth);
     document.getElementById('CalcAvgBtn').addEventListener("click", calcAvg);
+    document.getElementById('delAll').addEventListener("click", delAllResponses);
     
     
     setupOpenIstructions('calcAvgHelp', 'AnalyzeFormResultsHelp-Avg', 'Analyze Form Results Help');
@@ -29,6 +30,10 @@
         var qNumbers = document.getElementById("qNumbers").value;
         google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).calcResponsesAvg(qNumbers);
         
+    }
+
+    function delAllResponses() {
+        google.script.run.withFailureHandler(onFailure).withSuccessHandler(showAlert).delAllResponses();
     }
 
 </script>

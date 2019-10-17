@@ -79,10 +79,7 @@ function removeDuplicates(PrimaryItem) {
 }
 
 
-
-
-
-
+/*********************************************************************************/
 
 
 // Open a form by Url and remove duplicate responses based on the first question.
@@ -168,16 +165,21 @@ function removeUnAuth(PrimaryItem) {
 }
 
 
+/*********************************************************************************/
 
 
+function calcResponsesAvg(qNumbers) {
 
-
-
-function calcResponsesAvg2(qNumbers) {
-
-    SpreadsheetApp.getUi().alert("Caming Soon...");
+    SpreadsheetApp.getUi().alert("Coming Soon...");
     return;
-    qNumbers = qNumbers.split(",");
+}
+
+
+/*********************************************************************************/
+
+
+// Open a form by Url and remove duplicate responses based on the first question.
+function delAllResponses() {
 
     var formsUrlList = getActiveRangeValues();
 
@@ -186,8 +188,8 @@ function calcResponsesAvg2(qNumbers) {
     if (areYouSureAlert(formsUrlList.length) == false) {
         return;
     }
-
-    showMessageBox('Calculating... Please wait', '', loadingGif, 300, 150, 100, 100);
+    
+    showMessageBox('Removing... Please wait', '', loadingGif, 300, 150, 100, 100);
 
     try {
         var numOfItems = FormApp.openByUrl(formsUrlList[0]).getResponses();
@@ -201,11 +203,6 @@ function calcResponsesAvg2(qNumbers) {
     }
 
 
-    if (qNumbers.length > numOfItems) {
-        SpreadsheetApp.getUi().alert('Your form contain ' + numOfItems + "questions. Can't analyze " + qNumbers.length + ".");
-        return;
-    }
-
     for (var k = 0; k < formsUrlList.length; k++) {
 
         // extract form responses into array 
@@ -215,37 +212,10 @@ function calcResponsesAvg2(qNumbers) {
             errorsArr.push(formsUrlList[k]);
             continue;
         }
+        form.deleteAllResponses();
 
-        var formResponses = form.getResponses();
-
-        for(var i = 0; i < qNumbers.length; i++) {
-            var qNumber = parseInt(qNumbers[i]);
-            Logger.log("qNumbers[i]: " + qNumbers[i]);
-
-            var itemResponseValues = getItemValuesFromResponses(formResponses, qNumber);
-            Logger.log("itemResponseValues: " + itemResponseValues);
-            var sum = 0;
-            var counter = 0;
-            Logger.log("q: " + i);
-            for(var j = 0; j < itemResponseValues.length; j++) {
-                var num = parseInt(itemResponseValues[j]);
-                if(! isNaN(num)) {
-                    sum += num;
-                    counter++;
-                }
-
-            }
-            Logger.log("sum: " + sum);
-            Logger.log("counter: " + counter);
-            var itemAvg = sum / counter;
-            Logger.log("itemAvg: " + itemAvg);
-            var itemTitle = formResponses[0].getItemResponses()[qNumber].getItem().asScaleItem().getTitle();
-//            Logger.log("itemTitle: " + itemTitle);
-            formResponses[0].getItemResponses()[qNumber].getItem().asScaleItem().setTitle(itemTitle + " | " + itemAvg.toFixed(2));
-        }
-        
     }
-    
+
     var msg = 'Done!';
     if (errorsArr.length > 0) {
         msg = "Got error when tried to open the following forms:\n\n" + errorsArr.join("\n") + "\n\nOther forms analyzed successfully.";
@@ -255,11 +225,7 @@ function calcResponsesAvg2(qNumbers) {
 }
 
 
-
-
 /*********************************************************************************/
-
-
 
 
 // return list of values from the active range
@@ -274,8 +240,7 @@ function getActiveRangeValues() {
 }
 
 
-
-
+/*********************************************************************************/
 
 
 function getItemValuesFromResponses(formResponsesArr, index) {
@@ -293,7 +258,7 @@ function getItemValuesFromResponses(formResponsesArr, index) {
 }
 
 
-
+/*********************************************************************************/
 
 
 function submitResponses(form, formResponsesArr) {
@@ -314,6 +279,7 @@ function submitResponses(form, formResponsesArr) {
 }
 
 
+/*********************************************************************************/
 
 
 function areYouSureAlert(numOfForms) {
@@ -330,3 +296,6 @@ function areYouSureAlert(numOfForms) {
     }
     return true;
 }
+
+
+/*********************************************************************************/
