@@ -9,13 +9,13 @@ function onInstall() {
 /* What should the add-on do when a document is opened */
 function onOpen() {
     var ui = SpreadsheetApp.getUi();
-    ui.alert('Hi!',"Welcome to Bulk Forms.\n\nPlease read carefully the instructions and limitations.\n\nTo start, open 'Bulk Forms' from the menu.", ui.ButtonSet.OK);
+    ui.alert('Hi!',"Welcome to Many Forms.\n\nPlease read carefully the instructions and limitations.\n\nTo start, open 'Many Forms' from the menu.", ui.ButtonSet.OK);
     
     var approvedList = SpreadsheetApp.getActive().getSheetByName('Approved List');
     if (approvedList == null) {
       SpreadsheetApp.getActive().insertSheet('Approved List');
     }
-    ui.createMenu('Bulk Forms')
+    ui.createMenu('Many Forms')
       .addItem('Create Forms', 'CreateFormsMenu')
       .addItem('Form Settings', 'FormSettingsMenu')
       .addItem('Analyze Form Results', 'AnalyzeMenu')
