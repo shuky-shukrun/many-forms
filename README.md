@@ -16,7 +16,7 @@ Using this add-on, we can take a sheet of data (the data from the first part for
 Once we do that, we have a database of google form files, witch can be used for a survey system.
 
 ### For Developers
-If you want to contribute to this project, please [click here](/for-developers)
+If you want to contribute to this project, please [click here](/for-developers.md)
 I wish to put the files in more reasonable structure, but since I have deploy it eventually to Google Apps Script service, I have to keep all the files together in one folder.
 Considering that, I tried to named the files in a way that keep them grouped by subjects.
 
