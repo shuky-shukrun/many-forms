@@ -14,7 +14,7 @@ function onOpen() {
     if (approvedList == null) {
       SpreadsheetApp.getActive().insertSheet('Approved List');
     }
-    ui.createAddonMenu()
+    ui.createMenu('Many Forms')
       .addItem('Create Forms', 'CreateFormsMenu')
       .addItem('Form Settings', 'FormSettingsMenu')
       .addItem('Analyze Form Results', 'AnalyzeMenu')

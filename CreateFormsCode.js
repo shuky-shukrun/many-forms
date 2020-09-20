@@ -1,4 +1,5 @@
 /* This Google Script function does all the magic. */
+
 function createFormsJS(data) {
   
   showMessageBox('Creating... Please wait', '', loadingGif, 300, 150, 100, 100);
@@ -36,7 +37,7 @@ function createFormsJS(data) {
       var newFormFile = baseForm.makeCopy(newName, destFolder);
       var newForm = FormApp.openById(newFormFile.getId());
       newForm.setTitle(newName);
-      newForm.setRequireLogin(false);
+//      newForm.setRequireLogin(false);
       
       // update new next cell in the row to contain the new form URL
       ws.getRange(firstRow + row,  lastColumn+1).setValue(newForm.getEditUrl());
